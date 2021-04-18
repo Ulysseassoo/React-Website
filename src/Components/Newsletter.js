@@ -21,7 +21,7 @@ function Newsletter() {
                 <button type="submit">Suscribe to newsletter</button>
                 <label>
                     <input type="checkbox" required></input>
-                    I read and accept the <a href="#">privacy policy.</a>
+                    I read and accept the privacy policy.
                 </label>
             </form>
         </div>
