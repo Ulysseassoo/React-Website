@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    left: 0;
+    top: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+    .overlay {
+        grid-area: 1 / 1 / 9 / 5;
+        width: 100%;
+        height: 100%;
+        background-color: #06101a;
+        opacity: 0.3;
+        display: block;
+        z-index: 1;
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+    .first {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        grid-area: 1 / 1 / 9 / 5;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    }
+    .second {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        grid-area: 1 / 1 / 9 / 5;
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+    .nav {
+        grid-area: 1 / 1 / 2 / 5;
+    }
+    p {
+        padding: 2rem calc((100vw - 1000px) / 8);
+        grid-area: 5 / 1 / 8 / 4;
+        color: #F1D302;
+        z-index: 99;
+        font-size: 2.5rem;
+        margin-left: 1rem;
+        span {
+            color: #FDFFFC;
+            font-size: 3.75rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+    }
+    .links {
+        grid-area: 8 / 4 / 9 / 5;
+        z-index: 99;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .background {
+        p {
+            font-size: 2rem;
+            span {
+                font-size: 3rem
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .background {
+        p {
+            font-size: 1.5rem;
+            span {
+                font-size: 2.5rem
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 495px) {
+    .background {
+        p {
+            font-size: 1.3rem;
+            span {
+                font-size: 2rem
+            }
+        }
+    }
+}
+
+

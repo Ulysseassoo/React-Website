@@ -1,0 +1,143 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bike_logo {
+    background-color: #020100;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+    padding-bottom: 5rem;
+    img {
+        width: 50%;
+        grid-area: 1 / 1 / 4 / 7;
+        z-index: 1;
+        margin-top: 10rem;
+    }
+    .slider_games {
+        grid-area: 1 / 1 / 4 / 7;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 0.1fr) 0.2fr 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px; 
+        padding: 2rem calc((100vw - 1000px) / 8);
+        margin-left: 1rem;
+        place-items: center;
+        h1 {
+            color: white;
+            padding-bottom: 2rem;
+            font-size: 2rem;
+            grid-area: 1 / 2 / 2 / 6;
+        }
+        .text {
+            color: white;
+            font-size: 1.5rem;
+            width: 80%;
+            grid-area: 2 / 2 / 3 / 6;
+        }
+        .arrow_left {
+            grid-area: 3 / 1 / 5 / 2;
+            font-size: 2rem;
+            color: white;
+        }
+        .arrow_right {
+            grid-area: 3 / 6 / 5 / 7;
+            font-size: 2rem;
+            color: white;
+        }
+        .slides_container {
+            grid-area: 3 / 2 / 5 / 6;
+            width: 60%;
+            position: relative;
+            overflow-x:hidden;
+            overflow-y:hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+            .slides {
+                width: 2870px;
+                transition: all 0.1s ease 0.1s;
+                display: flex;
+                transform: translate3d(900px, 0px, 0px);
+                padding-top: 2rem;
+                margin-left: 20rem;
+                .slide {
+                    width: 380px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                    margin-right: 2rem;
+                    user-select: none;
+                    cursor: grab;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        -webkit-clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+                        clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+                        background-color: #161616;
+                    }
+                    h2 {
+                        font-size: 1.5rem;
+                        color: white;
+                        background-color: #235789;
+                        padding: 1rem 2rem;
+                        z-index: 3;
+                        -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%); 
+                        clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+                        margin-bottom: 3.5rem;
+                        rotate: -10deg;
+                    }
+                    .content {
+                        z-index: 3;
+                        display: flex;
+                        flex-direction: column;
+                        place-items: center;
+                        p {
+                            color: white;
+                            font-size: 1.3rem;
+                            padding-bottom: 1rem;
+                            font-weight: bold;
+                        }
+                        & p:nth-child(3) {
+                            padding-top: 2rem;
+                        }
+                        span {
+                            color: #F1D302;
+                            font-size: 1.5rem;
+                        }
+                    }
+                    button {
+                        padding: 1rem 3rem;
+                        color: white;
+                        z-index: 5;
+                        position: relative;
+                        top: 20px;
+                        margin-top: 2rem;
+                        transition: 0.5s ease;
+                        background-color: #161616;
+                        border-radius: 1.5rem;
+                        border: 1px solid #F1D302;
+                        cursor: pointer;
+                        &:hover {
+                            border: 1px solid #161616;
+                            background-color: #F1D302;
+                            transition: 0.5s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
