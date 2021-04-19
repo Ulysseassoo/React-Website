@@ -25,12 +25,12 @@ function SliderImage({Sliders}) {
                 <FaArrowLeft />
             </div>
             <div className="right_arrow" onClick={nextSlide}>
-                <FaArrowRight onClick={nextSlide} />
+                <FaArrowRight />
             </div>
             {SliderImageData.map((slider, index) => {
                 return(
                     <div className={index === current ? 'slide active' : 'slide'} key={index}>
-                        {index === current && (<img src={slider.image} alt="vélo_courses" class="image"/>)}
+                        {index === current && (<img src={slider.image} alt="vélo_courses" className="image"/>)}
                     </div>
                 )
             })}

@@ -9,6 +9,7 @@ import Newsletter from '../Components/Newsletter'
 import Footer from '../Components/Footer'
 import '../Styles/Index.scss'
 import { SliderImageData } from '../Components/SliderImageData'
+import { SliderInfos } from '../Components/SliderInfos'
 
 function index() {
     return (
@@ -25,16 +26,13 @@ function index() {
                 <Events />
             </section>
             <section className="matches" id="matches">
-                <Matches />
+                <Matches SliderInfos={SliderInfos} />
             </section>
             <section className="highlights" id="highlights">
-                <SliderImage Sliders={SliderImageData}/>
+                <SliderImage Sliders={SliderImageData} />
             </section>
             <section className="newsletter" id="newsletter">
                 <Newsletter />
-            </section>
-            <section className="news" id="news">
-                
             </section>
             <footer>
                 <Footer />

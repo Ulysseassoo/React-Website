@@ -5,7 +5,7 @@ import '../Styles/Footer.scss'
 function Footer() {
     return (
         <div className="footer_container">
-                <p>Velo World. All Rights Reserved, @2021</p>
+                <p>Velo World. Tout droits réservés, @2021</p>
                 <ul className="links_footer">
                     <li><FaFacebook /></li>
                     <li><FaInstagram /></li>
@@ -14,9 +14,9 @@ function Footer() {
                     <li><FaYoutube /></li>
                 </ul>
                 <div className="policies">
-                    <p>Privacy policy</p>
+                    <p>Politique de Confidentialité</p>
                     <span></span>
-                    <p>Terms & Conditions</p>
+                    <p>Termes & Conditions</p>
                 </div>
         </div>
     )

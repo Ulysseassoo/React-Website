@@ -114,3 +114,24 @@
         }
     }
 }
+
+@media screen and (max-width: 415px) {
+    .newsletter {
+        .container {
+            margin: 1.5rem;
+            .text {
+                p {
+                    text-align: center;
+                }
+            }
+            form {
+                input {
+                    font-size: 0.6rem;
+                }
+                button {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+}

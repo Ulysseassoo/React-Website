@@ -46,15 +46,6 @@ function Navbar() {
                 <Link to ="newsletter" smooth={true} duration={800}>
                     <li className={item ? 'active' : ''} onClick={() => activeLink()}>newsletter</li>
                 </Link>
-                <Link to ="partners" smooth={true} duration={800}>
-                    <li className={item ? 'active' : ''} onClick={() => activeLink()}>partners</li>
-                </Link>
-                <Link to ="gallery" smooth={true} duration={800}>
-                    <li className={item ? 'active' : ''} onClick={() => activeLink()}>gallery</li>
-                </Link>
-                <Link to ="news" smooth={true} duration={800}>
-                    <li className={item ? 'active' : ''} onClick={() => activeLink()}>news</li>
-                </Link>
             </ul>
         </nav>
     )

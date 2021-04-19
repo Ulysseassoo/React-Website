@@ -52,3 +52,25 @@ footer {
         }
     }
 }
+
+@media screen and (max-width: 415px) {
+    footer {
+        .footer_container{ 
+            padding: 0.5rem 1rem;
+            p {
+                font-size: 0.6rem;
+                text-align: center;
+            }
+            ul {
+                li {
+                    font-size: 0.5rem;
+                }
+            }
+            .policies {
+                p {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+}

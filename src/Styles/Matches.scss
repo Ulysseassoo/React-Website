@@ -53,21 +53,15 @@
         }
         .slides_container {
             grid-area: 3 / 2 / 5 / 6;
-            width: 60%;
+            width: 100%;
             position: relative;
             overflow-x:hidden;
             overflow-y:hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 3rem;
             .slides {
-                width: 2870px;
+                width: 100%;
                 transition: all 0.1s ease 0.1s;
                 display: flex;
-                transform: translate3d(900px, 0px, 0px);
                 padding-top: 2rem;
-                margin-left: 20rem;
                 .slide {
                     width: 380px;
                     display: flex;
@@ -76,6 +70,7 @@
                     position: relative;
                     margin-right: 2rem;
                     user-select: none;
+                    padding: 2rem;
                     cursor: grab;
                     &::before {
                         content: "";
@@ -123,6 +118,7 @@
                         color: white;
                         z-index: 5;
                         position: relative;
+                        margin-top: 2rem;
                         top: 20px;
                         margin-top: 2rem;
                         transition: 0.5s ease;
@@ -140,4 +136,94 @@
             }
         }
     }
+}
+
+@media screen and(max-width: 769px) {
+    .bike_logo {
+        .slider_games {
+            .text {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 669px) {
+    .bike_logo {
+        .slider_games {
+            .slides_container {
+                .slides {
+                    .slide {
+                        h2 {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and(max-width: 521px) {
+    .bike_logo {
+        .slider_games {
+            .slides_container {
+                .slides {
+                    .slide {
+                        h2 {
+                            font-size: 0.8rem;
+                            rotate: -25deg;
+                        }
+                        .content {
+                            p {
+                                font-size: 1rem;
+                            }
+                            span {
+                                font-size: 1.1rem;
+                            }
+                        }
+                        button {
+                            padding: 0.5rem 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and(max-width: 415px) {
+    .bike_logo {
+        .slider_games {
+            h1 {
+                font-size: 1.3rem;
+            }
+            .text {
+                font-size: 1.1rem;
+            }
+            .slides_container {
+                .slides {
+                    .slide {
+                        margin-right: 0;
+                        h2 {
+                            font-size: 0.6rem;
+                            rotate: -20deg;
+                            width: 150px;
+                        }
+                        .content {
+                            p {
+                                font-size: 0.8rem;
+                            }
+                            span {
+                                font-size: 0.9rem;
+                            }
+                        }
+                        button {
+                            padding: 0.4rem 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+    } 
 }
